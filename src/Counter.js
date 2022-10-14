@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ReactAnime from "react-animejs";
 import Box from "./Box";
+import './index.css'
 
 const Counter = () => {
   const [counter, setCounter] = useState(0)
@@ -19,7 +20,7 @@ const Counter = () => {
           {counter}
         </div>
       </OnUnmountAnime>
-      <div style={{ position: "absolute", top: 55, left: 95 }}>
+      <div style={{ position: "absolute", top: 55, left: 95, display: 'flex', gap: 10 }}>
         <div className="button" onClick={() => handleClick("dec")}>
           -
         </div>
@@ -38,7 +39,7 @@ const OnUnmountAnime = ({ children, count }) => {
   const animation = [
     {
       targets: "#BoxSlide",
-      translateX: -100,
+      translateX: 200,
       duration: 0
     },
     {
