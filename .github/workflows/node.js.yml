@@ -21,10 +21,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - run:
-          git add .
-          git stash 
-          git checkout develop
-          git pull origin develop
-          npm install
-          npm run build
+      - run: git add .
+      - run: git stash 
+      - run: git checkout develop
+      - run: git pull origin develop
+      - run: npm install
+      - run: npm run build
