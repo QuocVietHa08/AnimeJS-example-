@@ -15,4 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - run: npm ci
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - run: npm ci
